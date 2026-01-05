@@ -1,11 +1,12 @@
 import React from "react";
+import "./navBar.css"
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top custom-navbar">
+    <nav className="navbar navbar-expand-lg navbar-dark  fixed-top ">
       <div className="container">
-        <Link className="navbar-brand fw-bold" to="/">
+        <Link className="navbar-brand fw-bold color" to="/" style={{ color: "#000" }}>
           Asin A
         </Link>
 
@@ -35,7 +36,6 @@ const Navbar = () => {
                 Projects
               </a>
             </li>
-            {/* No Contact Me button as requested */}
           </ul>
         </div>
       </div>
