@@ -5,7 +5,6 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 const Hero = () => {
   return (
     <section className="hero-section">
-      {/* LEFT SIDE */}
       <div className="hero-left animate-left">
         <span className="hero-small">HI, I AM</span>
 
@@ -15,7 +14,7 @@ const Hero = () => {
 
         <p className="hero-desc">
           I’m a full stack developer who loves building clean, modern web
-          applications with React, Node.js, and MongoDB.
+          applications with React, Node.js, Express and MongoDB.
         </p>
 
         <div className="hero-socials">
@@ -30,8 +29,6 @@ const Hero = () => {
           </a>
         </div>
       </div>
-
-      {/* RIGHT SIDE */}
       <div className="hero-right animate-right">
         <img
           src={profile}

@@ -9,7 +9,7 @@ const Footer = () => {
         </span>
         <div className="small">
           <span className="me-3">📧 asinakku@gmail.com</span>
-          <span>📞 7902260176</span>
+          <span>📞 +91 9778555953</span>
         </div>
       </div>
     </footer>

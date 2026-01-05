@@ -1,0 +1,10 @@
+.custom-navbar .container {
+  padding-right: 4rem;  /* increase right spacing */
+  padding-left: 4rem;   /* keep symmetry */
+}
+.custom-navbar .navbar-nav {
+  margin-right: 1.5rem;
+}
+.navbar-nav {
+  gap: 5rem;   /* increase space between items */
+}
