@@ -5,6 +5,7 @@ import { projects } from "../data/projectData";
 const ProjectDetail = () => {
   const { projectId } = useParams();
   const project = projects.find((p) => p.id === projectId);
+  
 
   if (!project) {
     return (
@@ -20,11 +21,13 @@ const ProjectDetail = () => {
   return (
     <div className="section-light py-5">
       <div className="container">
-        <Link to="/" className="btn btn-link mb-3 ps-0">
+        <Link to="/" className="btn btn-link mb-3 ps-0" style={{textDecoration:"none"}}>
           ← Back to home
         </Link>
 
-        <h2 className="mb-3">{project.title}</h2>
+        <h2 className="mb-4">{project.title}</h2>
+
+        {/* Main image */}
         <div className="mb-4 ratio ratio-16x9">
           <img
             src={project.image}
@@ -33,7 +36,27 @@ const ProjectDetail = () => {
           />
         </div>
 
-        <p className="mb-3">{project.description}</p>
+        <p className="mb-4">{project.description}</p>
+
+        {/* Optional image gallery */}
+        {project.images && (
+          <>
+            <h5 className="mb-3">Project Screenshots</h5>
+            <div className="row g-3 mb-4">
+              {project.images.map((img, index) => (
+                <div key={index} className="col-md-6 col-lg-4">
+                  <div className="ratio ratio-16x9">
+                    <img
+                      src={img}
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      className="project-image"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
 
         {project.link && (
           <a

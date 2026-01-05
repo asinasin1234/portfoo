@@ -13,20 +13,30 @@ const App = () => {
   return (
     <>
       <Navbar />
+
       <Routes>
+        {/* HOME */}
         <Route
           path="/"
           element={
             <>
               <Hero />
               <Skills />
-              <Projects />
+              <Projects /> {/* 👈 keep here */}
             </>
           }
         />
-        <Route path="/skills/:skillId" element={<SkillDetail />} />
+
+        {/* PROJECTS PAGE */}
+        <Route path="/projects" element={<Projects />} />
+
+        {/* PROJECT DETAIL */}
         <Route path="/projects/:projectId" element={<ProjectDetail />} />
+
+        {/* SKILL DETAIL */}
+        <Route path="/skills/:skillId" element={<SkillDetail />} />
       </Routes>
+
       <Footer />
     </>
   );

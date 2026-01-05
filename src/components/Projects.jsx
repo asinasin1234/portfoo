@@ -34,7 +34,8 @@ const Projects = () => {
                   </p>
                   <Link
                     to={`/projects/${project.id}`}
-                    className="btn btn-outline-dark mt-2 align-self-start"
+                    className="btn btn-outline-light mt-2 align-self-start"
+                     onClick={() => console.log("Clicked project:", project.id)}
                   >
                     View details
                   </Link>
